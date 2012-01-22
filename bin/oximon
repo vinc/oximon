@@ -54,7 +54,7 @@ if __name__ == '__main__':
     except SerialException as e: 
         exit('oximon: %s' % e)
 
-    print('#date\theart rate\toxigen saturation')
+    print('#date\theart rate\toxygen saturation')
     is_finished = False
     try:
         while not is_finished:

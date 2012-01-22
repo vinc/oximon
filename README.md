@@ -19,7 +19,7 @@ Usage
 To use Oximon, run it with the correct serial port:
 
     $ oximon --port /dev/ttyUSB0 
-    #date   heart rate  oxigen saturation
+    #date   heart rate  oxygen saturation
     2012-01-03 07:22:14.951777  54  97
     2012-01-03 07:22:15.499333  54  97
     2012-01-03 07:22:16.534203  54  97
