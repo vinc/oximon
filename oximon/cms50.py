@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 #
-# Copyright (C) 2011 Vincent Ollivier <contact@vincentollivier.com>
+# Copyright (C) 2011-2013 Vincent Ollivier <contact@vincentollivier.com>
 #
 # This file is part of Oximon.
 #
