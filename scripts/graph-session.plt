@@ -1,8 +1,11 @@
 #!/usr/bin/gnuplot
 reset
 
-set terminal png enhanced size 800 500 font "~/.fonts/Inconsolata.ttf" 11
+set terminal pngcairo enhanced size 700,400 font '"ttf-inconsolata.otf",10'
 set output "/tmp/oximon-graph.png"
+
+set samples 1001
+set datafile missing "0"
 
 set xdata time
 set timefmt "%Y-%m-%d %H:%M:%S"
@@ -16,12 +19,11 @@ set y2label "Oxygen saturation (%)"
 set y2range [80:100]
 set y2tics border mirror
 
-set key right center 
+set key right bottom
 set grid
 set style data lines
 
-#set label 1 "falling asleep" at "2011-10-25 00:31:00",71
-#set arrow 1 from "2011-10-25 00:30:00",70 to "2011-10-24 23:57:00",55 
-
-plot "/tmp/oximon-session.dat" using 1:3 title 'HR', \
-     "" using 1:4 axes x1y2 title 'SAT'
+plot "/tmp/oximon-session.dat" u 1:4 with points axes x1y2 lc rgbcolor "#b6c2cc" pt 2 notitle, \
+     "" u 1:3 with points lc rgbcolor "#ccbcb6" pt 2 notitle, \
+     "" u 1:3 smooth bezier with lines t 'HR' lc rgbcolor "#cc3700" lw 2, \
+     "" u 1:4 smooth bezier axes x1y2 t 'SAT' lc rgbcolor "#0073cc" lw 2
