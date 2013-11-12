@@ -12,7 +12,7 @@ set timefmt "%Y-%m-%d %H:%M:%S"
 set format x "%H:%M"
 set xlabel "Time (hh:mm)"
 
-set ylabel "Hearth rate (bpm)"
+set ylabel "Heart rate (bpm)"
 set yrange [30:90]
 
 set y2label "Oxygen saturation (%)"
